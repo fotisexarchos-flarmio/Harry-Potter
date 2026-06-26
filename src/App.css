@@ -1,0 +1,123 @@
+@reference "tailwindcss";
+
+body {
+  @apply m-0 bg-[#1a1a1a] font-['Verdana',sans-serif];
+}
+
+.app-container {
+  @apply flex justify-center items-center min-h-screen p-[40px_20px] bg-[#1a1a1a] font-['Verdana',sans-serif];
+}
+
+.card-list {
+  @apply flex flex-col gap-[20px] w-full max-w-[450px];
+}
+
+/* Card Styles */
+.house-card {
+  @apply bg-white rounded-[8px] p-[20px] shadow-[0_4px_12px_rgba(0,0,0,0.15)] flex flex-col gap-[14px];
+}
+
+.card-header {
+  @apply flex justify-between items-baseline;
+}
+
+.house-name {
+  @apply m-0 text-[1.25rem] font-bold text-black;
+}
+
+.house-animal {
+  @apply text-[0.85rem] text-[#555555];
+}
+
+/* Dynamic Gradient Bar */
+.gradient-bar {
+  @apply h-[24px] rounded-[6px] w-full border border-[#e0e0e0];
+}
+
+/* Card Footer */
+.card-footer {
+  @apply text-[0.85rem] text-[#333333] mb-[2px];
+}
+
+.house-founder {
+  @apply m-0;
+}
+
+/* Reusable Custom Input Utility Styles */
+.custom-input {
+  @apply w-full rounded-[6px] border border-[#e0e0e0] px-[12px] bg-white text-black outline-none transition-colors duration-200 focus:border-[#3498db];
+}
+
+.input-small {
+  @apply h-[34px] text-[0.85rem];
+}
+
+.input-large {
+  @apply h-[46px] text-[1rem] mb-[4px];
+}
+
+/* Action Control Row (Input + Circular Button Alignment) */
+.action-row {
+  @apply flex items-center gap-[10px] w-full;
+}
+
+.circle-add-btn {
+  @apply w-[34px] h-[34px] rounded-full bg-black text-white flex items-center justify-center text-[1.4rem] font-light cursor-pointer transition-all duration-200 hover:bg-gray-800 select-none shrink-0 outline-none border-none pb-[4px];
+}
+
+.circle-add-btn.active {
+  @apply rotate-45 bg-red-600 hover:bg-red-700;
+}
+
+/* Step 3 Add input field injection spacing container */
+.add-trait-wrapper {
+  @apply w-full mt-[2px];
+}
+
+/* Traits Layout utilities */
+.traits-section {
+  @apply flex flex-col gap-[10px] mt-[4px];
+}
+
+.traits-container {
+  @apply flex flex-wrap gap-[8px] mt-[2px];
+}
+
+/* Step 3: Dark Pill Badges mimicking the design platform specification */
+.trait-badge-dark {
+  @apply text-[0.8rem] px-[14px] py-[6px] bg-[#3d3530] text-white rounded-full font-medium tracking-wide flex items-center gap-[6px] cursor-pointer transition-all duration-150 select-none hover:bg-red-800;
+}
+
+.remove-cross {
+  @apply text-[1.1rem] font-bold leading-none opacity-60 ml-[2px] transition-opacity duration-150;
+}
+
+.trait-badge-dark:hover .remove-cross {
+  @apply opacity-100;
+}
+
+.no-traits {
+  @apply text-[0.8rem] text-gray-400 italic mt-[2px];
+}
+
+/* Step 3 global top controls styling blueprints */
+.global-submit-btn {
+  @apply w-full h-[46px] bg-[#2ea44f] text-white font-bold rounded-[6px] border-none cursor-pointer transition-all shadow-[0_2px_6px_rgba(0,0,0,0.2)] hover:bg-[#2c974b] active:scale-[0.99] disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.success-banner {
+  @apply w-full text-center p-[10px] bg-[#1f3a28] text-[#4af181] text-[0.85rem] rounded-[6px] border border-[#2c633c] font-medium;
+}
+
+/* Loading Spinner styles */
+.spinner-container {
+  @apply flex justify-center items-center min-h-screen bg-[#1a1a1a];
+}
+
+.loading-spinner {
+  @apply w-[50px] h-[50px] border-[5px] border-[#f3f3f3] border-t-[#3498db] rounded-full animate-spin;
+}
+
+.error-message {
+  @apply text-[#ff4d4d] text-center font-['Verdana',sans-serif] mt-[50px];
+}
